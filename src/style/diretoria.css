@@ -1,0 +1,81 @@
+:root{
+    --cor: yellow;
+}
+
+.diretoria{
+    background-color: white;
+    padding: 50px;
+    margin: 50px;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.diretoria-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.diretoria-card {
+    position: relative;
+    width: 220px;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.diretoria-card:hover {
+    transform: translateY(-5px);
+}
+
+.diretoria-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Overlay Gradiente */
+.diretoria-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+}
+
+.diretoria-info {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    z-index: 1; /* Garante que o texto fique acima do gradiente */
+}
+
+.diretoria-diretor {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+.diretoria-nome {
+    font-size: 0.9em;
+    margin: 0;
+    font-weight: 300;
+}
